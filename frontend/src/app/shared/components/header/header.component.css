@@ -1,0 +1,12 @@
+* {
+    font-weight: 600;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+.header {
+    height: 2.5rem;
+    background: var(--midlight);
+}

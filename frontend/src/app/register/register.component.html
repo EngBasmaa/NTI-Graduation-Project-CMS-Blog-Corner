@@ -1,0 +1,50 @@
+<div class="container my-5">
+  <h2 class="text-center">Register</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()" class="mt-4">
+
+    <div class="form-group mb-3">
+      <input type="text" class="form-control" placeholder="First Name" formControlName="name">
+      <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="error-msg">
+        First name is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname">
+      <div *ngIf="registerForm.get('lastname')?.invalid && registerForm.get('lastname')?.touched" class="error-msg">
+        Last name is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="email" class="form-control" placeholder="Email" formControlName="email">
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error-msg">
+        Valid email is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="error-msg">
+        Password must be at least 6 characters.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="file" class="form-control" (change)="onFileChange($event)">
+      <img *ngIf="imagePreview" [src]="imagePreview" alt="Image Preview" class="img-thumbnail mt-2" width="150">
+      <div *ngIf="registerForm.get('image')?.invalid && registerForm.get('image')?.touched" class="error-msg">
+        Please upload an image.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <textarea class="form-control" placeholder="About You" formControlName="about" rows="3"></textarea>
+      <div *ngIf="registerForm.get('about')?.invalid && registerForm.get('about')?.touched" class="error-msg">
+        Please tell us about yourself.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>

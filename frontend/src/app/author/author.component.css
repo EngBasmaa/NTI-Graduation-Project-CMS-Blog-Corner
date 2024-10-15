@@ -1,0 +1,101 @@
+.headline {
+    color: var(--orange);
+    margin-bottom: 4rem !important;
+}
+
+.container {
+    height: 55vh;
+    align-items: center;
+    padding: 1rem !important;
+    margin: 0 !important;
+}
+
+.productsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 3rem;
+}
+
+.about {
+    color: var(--grey) !important;
+    font-size: 2rem;
+}
+
+.create {
+    width: 10rem;
+}
+
+.row {
+    gap: 2rem
+}
+
+h3 {
+    color: var(--orange);
+}
+
+.box {
+    gap: 1rem;
+    /* border: 2px solid blue; */
+}
+
+.box p {
+    color: var(--midlight)
+}
+
+.content p {
+    color: var(--light)
+}
+
+.box img {
+    width: 100%;
+    max-height: 20rem
+}
+
+.details p {
+    font-weight: 600;
+    color: var(--midlight);
+}
+
+.content {
+    width: 80%;
+    margin-left: 6rem !important;
+    height: 65vh;
+}
+
+.author {
+    gap: 1rem;
+    width: 30rem
+}
+
+.btn {
+    color: var(--green) !important;
+    background: var(--orange);
+}
+
+
+.author img {
+    width: 5rem !important;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+small {
+    color: var(--light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--orange) !important;
+    padding: 3px 2rem !important;
+    border-radius: 2rem;
+    font-weight: 600 !important;
+}
+
+a:hover {
+    background-color: var(--light) !important;
+    color: var(--green) !important;
+}

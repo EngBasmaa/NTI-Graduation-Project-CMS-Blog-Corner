@@ -1,0 +1,38 @@
+<!-- author.component.html -->
+<div class="author d-flex justify-content-center align-items-center m-auto mt-5">
+  <img [src]="'http://127.0.0.1:5000/getImage/' + this.author?.image " class="card-img-top w-100 d-block" alt="{{author?.name}}'s image">
+  <!-- <img *ngIf="author.image" [src]="authService.imageUrl" alt="{{ author.name }}" /> -->
+  <div class="details d-flex flex-column">
+    <!-- <p class="text-center">{{author?.name}}</p> -->
+    <!-- <p class="about text-center">{{author?.about}}</p> -->
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="name mb-4 mt-4 text-center">{{author?.name}}</h3>
+  <p class="about text-center">{{author?.email}}</p>
+  <a [routerLink]="['/create-article']" class="create btn mt-5 m-auto d-block text-center">
+    New Article
+    <span *ngIf="!author">No author selected</span>
+
+  </a>
+
+  <div class="row d-flex justify-content-center recent w-100">
+    <div *ngFor="let article of articles" class="col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <img *ngIf="article?.image" [src]="'http://127.0.0.1:5000/getImage/' + article?.image" class="card-img-top w-100 d-block" alt="{{article?.title}}">
+        <div class="card-body p-2">
+          <h5 class="card-title text-center">
+            {{ articles[0].title }}
+          </h5>
+          <p class="about text-center">{{author?.about}}</p>
+
+          <p class="card-text text-center">
+            {{ article?.description }}
+          </p>
+        </div>
+        <a [routerLink]="['/article', article?.id]" class="btn mb-2 w-55 m-auto">Go to this Article</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.headline {
+    color: var(--orange);
+    margin-bottom: 4rem !important;
+}
+
+.container {
+    height: 55vh;
+    align-items: center;
+    padding: 2rem !important
+}
+
+.box {
+    gap: 1rem;
+    /* border: 2px solid blue; */
+}
+
+.box p {
+    color: var(--midlight)
+}
+
+.content p {
+    color: var(--light)
+}
+
+.box img {
+    width: 100%;
+    max-height: 20rem
+}
+
+.content {
+    width: 80%;
+    margin-left: 6rem !important;
+    height: 65vh;
+}
+
+.author img {
+    width: 7rem !important;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+small {
+    color: var(--light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--orange);
+    padding: 3px 2rem !important;
+    border-radius: 2rem;
+    font-weight: 600 !important;
+}
+
+a:hover {
+    background-color: var(--light);
+    color: var(--green) !important;
+}

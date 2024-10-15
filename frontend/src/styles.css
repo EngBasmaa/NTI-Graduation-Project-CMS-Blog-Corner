@@ -1,0 +1,24 @@
+@import url(./generalStyle.css);
+
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+}
+
+a:hover,
+fa-icon:hover {
+    color: var(--dark) !important;
+    cursor: pointer;
+}
+
+
+header {
+    z-index: 1000;
+    overflow-x: hidden;
+}
+
+footer {
+    z-index: 999;
+}

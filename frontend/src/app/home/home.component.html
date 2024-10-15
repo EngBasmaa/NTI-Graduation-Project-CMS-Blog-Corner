@@ -1,0 +1,30 @@
+<div class="headline text-center m-auto ">
+  <h1>Taking control of your daily life is easy when you know how</h1>
+</div>
+
+<!-- recent posts -->
+
+<div class="container mt-1 ">
+  <h3 class="mb-4 text-center">Recent Posts</h3>
+  <div class="row recent w-100">
+
+    <div *ngFor="let article of articles" class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <!-- <img *ngIf="imageUrls[article._id]" [src]="imageUrls[article._id]" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="imageUrls.has(article._id)" [src]="imageUrls.get(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="getImageUrl(article._id)" [src]="getImageUrl(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <img *ngIf="getImageUrl(article._id)" [src]="getImageUrl(article._id)" alt="{{ article.title }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-text">{{article.description}}</p>
+        </div>
+        <a (click)="storeArticleId(article._id)" routerLink="/article/:article._id" class="btn btn-primary mb-2 w-50 m-auto">Go somewhere</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="see-more">
+  <button routerLink="/article/all" type="button" class="btn all mt-3">See all posts</button>
+</div>

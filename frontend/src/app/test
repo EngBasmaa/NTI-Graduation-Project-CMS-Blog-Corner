@@ -1,0 +1,52 @@
+6708df3184056c5eac5b7a84
+
+
+
+<div class="author d-flex justify-content-center align-items-center">
+  <!-- <img [src]="author?.image ? 'http://localhost:5000/getImage/' + author.image : (author ? '../../assets/default-image.jpg' : '')" class="card-img-top w-100 d-block" alt="author"> -->
+  <!-- <img [src]="author?.image ? 'http://localhost:5000/getImage/' + author.image : '../../assets/default-image.jpg'" class="card-img-top w-100 d-block" alt="author"> -->
+  <img [src]="author && author.image ? 'http://localhost:5000/getImage/' + author.image : '../../assets/default-image.jpg'" class="card-img-top w-100 d-block" alt="author">
+
+  <div class="details d-flex flex-column">
+    <p class="text-center">{{author.name}} {{author.lastName}}</p>
+  </div>
+</div>
+
+<div class="container  mt-4 ">
+  <h3 class="mb-4 text-center">Author Posts</h3>
+  <div class="row d-flex justify-content-center recent w-100">
+
+    <div class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card  article-item">
+        <img lazyLoad src="/assets/client-1.jpg" class="card-img-top w-100 d-block" alt="post image">
+        <div class="card-body  p-2">
+          <h5 class="card-title text-center">Card title</h5>
+          <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <a routerLink="/article/:id" class="btn mb-2 w-55 m-auto">Go this Article</a>
+      </div>
+    </div>
+
+    <div class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <img lazyLoad src="/assets/client-1.jpg" class="card-img-top w-100 d-block" alt="post image">
+        <div class="card-body  p-2">
+          <h5 class="card-title text-center">Card title</h5>
+          <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <a routerLink="/article/:id" class="btn mb-2 w-55 m-auto">Go this Article</a>
+      </div>
+    </div>
+
+    <div class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <img lazyLoad src="/assets/client-1.jpg" class="card-img-top w-100 d-block" alt="post image">
+        <div class="card-body  p-2">
+          <h5 class="card-title text-center">Card title</h5>
+          <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <a routerLink="/article/:id" class="btn mb-2 w-55 m-auto">Go this Article</a>
+      </div>
+    </div>
+  </div>
+</div>

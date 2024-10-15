@@ -1,0 +1,36 @@
+:root {
+    --dark: #181C14;
+    --grey: #3C3D37;
+    --green: #697565;
+    --orange: rgb(246, 186, 113);
+    --midlight: #ecd1a9;
+    --light: #ECDFCC;
+}
+
+.green {
+    color: var(--green)
+}
+
+.mydark {
+    background-color: var(--dark);
+}
+
+.mygrey {
+    background-color: var(--grey);
+}
+
+.mygreen {
+    background-color: var(--green);
+}
+
+.mylight {
+    background-color: var(--light);
+}
+
+.mymidlight {
+    background-color: var(--midlight);
+}
+
+.myorange {
+    background-color: var(--orange);
+}

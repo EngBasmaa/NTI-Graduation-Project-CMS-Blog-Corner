@@ -1,0 +1,28 @@
+<div class="container mt-4 ">
+  <h3 class="mb-4 text-center">All Posts</h3>
+  <div class="row recent w-100">
+
+    <div *ngFor="let article of articles" class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <!-- <img *ngIf="imageUrls[article._id]" [src]="imageUrls[article._id]" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="imageUrls.has(article._id)" [src]="imageUrls.get(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="getImageUrl(article._id)" [src]="getImageUrl(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <img *ngIf="getImageUrl(article._id)" [src]="getImageUrl(article._id)" alt="{{ article.title }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-text">{{article.description}}</p>
+        </div>
+
+        <a routerLink="/article/:authorId" class="btn btn-primary mb-2 w-50 m-auto">Go somewhere</a>
+
+
+        <div *ngIf="isLoggedIn()">
+          <!-- Edit button -->
+          <a [routerLink]="['/edit-article', article._id]" class="btn d-block btn-warning mb-2 w-50 m-auto">Edit</a>
+          <!-- Delete button -->
+          <button (click)="deleteArticle(article._id)" class="btn d-block btn-danger mb-2 w-50 m-auto">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

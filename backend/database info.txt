@@ -1,0 +1,15 @@
+project name: [connection name]
+Boutique-Bazaar
+
+cluster name:
+Boutique-Backend
+
+user name: 
+basmaelmasry263
+
+password: 
+hwZ1JWOtEyqJaAcy
+hO8dAY69zkK7X1rj
+
+connection string:
+mongodb+srv://basmaelmasry263:hwZ1JWOtEyqJaAcy@boutique-backend.wisw3.mongodb.net/?retryWrites=true&w=majority&appName=Boutique-Backend

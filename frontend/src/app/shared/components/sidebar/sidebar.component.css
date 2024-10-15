@@ -1,0 +1,18 @@
+* {
+    color: var(--green) !important;
+    font-weight: 600;
+}
+
+hr {
+    border: 2px solid var(--green) !important;
+}
+
+.sidebar {
+    padding-top: 2rem !important
+}
+
+li a {
+    margin: 0.6rem auto !important;
+    text-align: center;
+    align-items: center;
+}

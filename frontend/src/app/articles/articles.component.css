@@ -1,0 +1,50 @@
+.card {
+    width: 30rem
+}
+
+h3 {
+    color: var(--light)
+}
+
+.recent {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.article-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-item .btn {
+    background: var(--midlight);
+    border: 1px solid var(--midlight);
+    color: var(--green);
+    font-weight: 600
+}
+
+.see-more {
+    margin: auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 50%
+}
+
+.all {
+    background: var(--light) !important;
+    color: var(--green);
+    font-weight: 600;
+    padding: 2px 1rem !important;
+    border-radius: 1rem;
+}
+
+.card {
+    height: 22rem
+}
+
+/* img {
+    width: 4rem;
+    height: 4rem
+} */

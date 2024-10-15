@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <h2 class="text-center">Create Article</h2>
+
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" class="mt-4">
+    <div class="form-group mb-3">
+      <input type="text" class="form-control" placeholder="title" formControlName="title">
+      <div *ngIf="articleForm.get('title')?.invalid && articleForm.get('title')?.touched" class="error-msg">
+        Title is required.
+      </div>
+    </div>
+
+    <!-- <div class="form-group d-flex mb-3">
+      <input type="text" class="form-control me-2" placeholder="tag" formControlName="tag">
+      <button type="button" class="btn" (click)="article.tags.push(tag);tag=''">Add</button>
+    </div> -->
+
+    <div class="form-group mb-3">
+      <input type="file" class="form-control" (change)="onFileChange($event)" [placeholder]="hasFocus ? 'Choose file...' : ''" [title]="hasFocus ? 'Select file to upload' : ''" (focus)="toggleFocus()" (blur)="toggleFocus()">
+    </div>
+
+    <div class="form-group mb-3">
+      <textarea class="form-control" placeholder="description" formControlName="description" rows="3"></textarea>
+      <div *ngIf="articleForm.get('description')?.invalid && articleForm.get('description')?.touched" class="error-msg">
+        Description is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+      <textarea class="form-control" placeholder="Enter text here..." formControlName="content" rows="4"></textarea>
+      <div *ngIf="articleForm.get('content')?.invalid && articleForm.get('content')?.touched" class="error-msg">
+        Content is required.
+      </div>
+    </div>
+
+    <button type="submit" class="btn  w-100" [disabled]="articleForm.invalid">Create</button>
+  </form>
+</div>

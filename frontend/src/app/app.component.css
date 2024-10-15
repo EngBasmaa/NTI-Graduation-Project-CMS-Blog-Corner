@@ -1,0 +1,28 @@
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row !important;
+    gap: 0;
+    justify-content: space-between;
+    min-height: 25rem !important;
+    z-index: 999;
+}
+
+.footer {
+    background: var(--midlight) !important;
+}
+
+.sidebar {
+    background: var(--light);
+    height: calc(100vh - 4.5rem) !important;
+}
+
+.main {
+    background: var(--green);
+    height: calc(100vh - 4.5rem) !important;
+    padding: 1rem !important
+}
+
+li a {
+    cursor: pointer;
+}

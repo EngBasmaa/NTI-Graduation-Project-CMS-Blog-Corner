@@ -1,0 +1,30 @@
+<div class="headline text-center m-auto mt-3 ms-5 me-5">
+  <h3>We are the <span> Blog Corner</span> ,<br />
+    where you can find all the latest news and updates!<br />
+    With team of content writers and designers.</h3>
+</div>
+
+<div class="container mt-4 ">
+  <h3 class="m-5 text-center">All Authors</h3>
+  <div class="row recent w-100">
+
+    <div *ngFor="let author of authors" class=" col-lg-3 col-md-3 col-sm-12 productsContainer article-item">
+      <div class="card article-item">
+        <!-- <img *ngIf="imageUrls[author._id]" [src]="imageUrls[article._id]" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="imageUrls.has(author._id)" [src]="imageUrls.get(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="getImageUrl(author._id)" [src]="getImageUrl(article._id)" class="card-img-top w-100 d-block" alt="{{ article.title }}'s image"> -->
+        <!-- <img *ngIf="getImageUrl(author._id)" [src]="getImageUrl(author._id)" alt="{{ author.name }} image" /> -->
+        <img [src]="'http://127.0.0.1:5000/getImage/' + author?.image " class="card-img-top w-100 d-block" alt="{{author?.name}}'s image">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{author.name}} {{author.lastname}}</h5>
+          <p class="card-text">{{author.about}}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<a routerLink="/article/all" class="btn mybtn mb-2 w-50 m-auto mt-5 d-block">See Articles</a>

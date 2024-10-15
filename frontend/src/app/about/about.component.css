@@ -1,0 +1,66 @@
+.headline {
+    color: var(--midlight);
+    margin-bottom: 4rem !important;
+}
+
+.card {
+    width: 18rem;
+    background: transparent;
+    border: none;
+}
+
+.midtitle {
+    color: var(--light);
+}
+
+.card-text {
+    color: var(--midlight);
+}
+
+span {
+    color: var(--orange);
+    font-weight: 700 !important;
+}
+
+.recent {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.article-item {
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.mybtn {
+    background: var(--midlight);
+    border: 1px solid var(--midlight);
+    color: var(--green);
+    font-weight: 600;
+    width: 10rem !important
+}
+
+.see-more {
+    margin: auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 50%
+}
+
+img {
+    width: 7rem !important;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: auto !important
+}
+
+.all {
+    background: var(--light) !important;
+    color: var(--green);
+    font-weight: 600;
+    padding: 2px 1rem !important;
+    border-radius: 1rem;
+}

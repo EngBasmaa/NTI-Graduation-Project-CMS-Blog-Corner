@@ -1,0 +1,20 @@
+<ul class="sidebar nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+  <li class="w-100">
+    <a routerLink="/home" routerLinkActive="active" class="nav-link px-0"> Home </a>
+  </li>
+  <li>
+    <a routerLink="/about" routerLinkActive="active" class="nav-link px-0"> About</a>
+  </li>
+  <li>
+    <a routerLink='article/all' routerLinkActive="active" class="nav-link px-0"> Articles</a>
+  </li>
+  <li>
+    <hr />
+  </li>
+  <li *ngIf="isLoggedIn()">
+    <a routerLink="/create-article" routerLinkActive="active" class="nav-link px-0"> Create Article</a>
+  </li>
+  <li>
+    <a routerLink="/privacy" routerLinkActive="active" class="nav-link px-0"> Privacy </a>
+  </li>
+</ul>

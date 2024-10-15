@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <h2 class="text-center">Edit Article</h2> <!-- Change this to Edit Article -->
+
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" class="mt-4">
+    <div class="form-group mb-3">
+      <input type="text" class="form-control" placeholder="Title" formControlName="title">
+      <div *ngIf="articleForm.get('title')?.invalid && articleForm.get('title')?.touched" class="error-msg">
+        Title is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="file" class="form-control" (change)="onFileChange($event)" [placeholder]="hasFocus ? 'Choose file...' : ''" [title]="hasFocus ? 'Select file to upload' : ''" (focus)="toggleFocus()" (blur)="toggleFocus()">
+    </div>
+
+    <div class="form-group mb-3">
+      <textarea class="form-control" placeholder="Description" formControlName="description" rows="3"></textarea>
+      <div *ngIf="articleForm.get('description')?.invalid && articleForm.get('description')?.touched" class="error-msg">
+        Description is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+      <textarea class="form-control" placeholder="Enter text here..." formControlName="content" rows="4"></textarea>
+      <div *ngIf="articleForm.get('content')?.invalid && articleForm.get('content')?.touched" class="error-msg">
+        Content is required.
+      </div>
+    </div>
+
+    <button type="submit" class="btn w-100" [disabled]="articleForm.invalid">Update</button> <!-- Change button text to Update -->
+  </form>
+</div>

@@ -1,0 +1,46 @@
+.container {
+    max-width: 600px;
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 0 !important;
+    margin: auto !important
+}
+
+input,
+textarea {
+    background: var(--light);
+    padding: 5px 0.5rem !important;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: 0 4px 1px var(--orange);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn {
+
+    padding: 5px !important;
+    background: var(--orange);
+    color: var(--green) !important;
+    font-weight: 700 !important;
+    cursor: pointer !important
+}
+
+.btn:hover {
+    background: var(--midlight) !important;
+    cursor: pointer !important
+}
+
+.error-msg {
+    color: var(--orange)
+}

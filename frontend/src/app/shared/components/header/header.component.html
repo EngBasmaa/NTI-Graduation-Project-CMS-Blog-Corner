@@ -1,0 +1,44 @@
+<nav class="header navbar navbar-expand-lg midlight">
+  <div class="container-fluid">
+
+    <a class="navbar-brand ms-2" routerLink="/home" routerLinkActive="active">Blog Corner</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 justify-content-end gap-5 me-5">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/author/login" routerLinkActive="active">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li> -->
+
+        <!-- <li class="nav-item" *ngIf="isLoggedIn() && _auth.getAuthorDataFromToken()">
+          <a class="nav-link" [routerLink]="['/author', _auth.getAuthorDataFromToken()?._id]" routerLinkActive="active">My Account</a>
+        </li> -->
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" [routerLink]="['/author', authorData?.id]" routerLinkActive="active">My Account</a>
+          <!-- <a class="nav-link" [routerLink]="['/author', authorData?.id]" routerLinkActive="active">My Account</a> -->
+          <!-- <a class="nav-link" [routerLink]="[authorData?.id]" routerLinkActive="active">My Account</a> -->
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/author/login" (click)="logout()" routerLinkActive="active">Log Out</a>
+        </li>
+
+      </ul>
+
+
+    </div>
+  </div>
+
+</nav>
